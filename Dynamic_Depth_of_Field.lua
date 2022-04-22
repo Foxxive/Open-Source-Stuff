@@ -21,10 +21,10 @@ local character = player.Character or player.CharacterAdded:Wait()
 local head = character:WaitForChild("Head")
 local HumanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
--- how far the object can be before it focuses
+-- how far the object can be before it focuses, change this to your liking
 local focusRadius = 6
 
--- TweenService is messy, you can change this if you like lol
+-- TweenService is messy so I used a generic Lerp function
 function Lerp(a, b, t)
 	return a + (b - a) * t
 end
@@ -41,7 +41,7 @@ game:GetService("RunService").RenderStepped:Connect(function(dt)
 	local camRay = Ray.new(camera.CFrame.Position, camera.CFrame.LookVector * focusRadius)
 	local hit, hitPosition = workspace:FindPartOnRayWithIgnoreList(camRay, ignoreList)
 
-	-- this is so transparent stuff doesn't break, change the value if you want
+	-- this is so transparent stuff doesn't break
 	if hit and hit.Transparency < 0.3 then
 		local distanceFromCamera = (hitPosition - camera.CFrame.Position).Magnitude
 		local intensity = focusRadius / distanceFromCamera * 0.25
