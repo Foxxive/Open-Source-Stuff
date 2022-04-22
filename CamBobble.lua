@@ -11,7 +11,7 @@
 
 
 --// This code is actually atrocious but it works i promise \\--
---// Put this in StarterCharacterScripts btw lol \\--
+--// Put this in StarterCharacterScripts \\--
 
 while true do
 	wait();
@@ -22,8 +22,7 @@ end;
 camera = game.Workspace.CurrentCamera;
 character = game.Players.LocalPlayer.Character;
 Z = 0;
-damping = character.Humanoid.WalkSpeed / 2; --[[This is pretty much the speed of the camera bobbing 
-you are free to change the character.Humanoid.WalkSpeed / 2 to either a whole number or change the division]]--
+damping = character.Humanoid.WalkSpeed / 2; --This is the strength of the bobbing
 PI = 3.1415926;
 tick = PI / 2;
 running = false;
