@@ -1,3 +1,16 @@
+--[[
+made by
+  ______ ______   ____   _________      ________ 
+ |  ____/ __ \ \ / /\ \ / /_   _\ \    / /  ____|
+ | |__ | |  | \ V /  \ V /  | |  \ \  / /| |__   
+ |  __|| |  | |> <    > <   | |   \ \/ / |  __|  
+ | |   | |__| / . \  / . \ _| |_   \  /  | |____ 
+ |_|    \____/_/ \_\/_/ \_\_____|   \/   |______|
+                                                 
+                                                 
+vinny#0123
+]]--
+
 local uis = game:GetService("UserInputService")
 local plrs = game:GetService("Players")
 
@@ -7,6 +20,7 @@ local hum = char:FindFirstChild("Humanoid")
 
 local ts = game:GetService("TweenService") 
 
+-- configurable values
 local default = 70
 local nowfov = 90
 local walkSpeed = 10
@@ -24,6 +38,8 @@ local tween2 = ts:Create(game.Workspace.CurrentCamera, info, properties2)
 local tween3 = ts:Create(hum,tweenInfo, properties3)
 local tween4 = ts:Create(hum,tweenInfo,properties4)
 
+
+-- sprint function
 uis.InputBegan:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.LeftShift then 
 		tween1:Play()
