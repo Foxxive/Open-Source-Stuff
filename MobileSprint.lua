@@ -1,3 +1,16 @@
+--[[
+made by:
+  ______ ______   ____   _________      ________ 
+ |  ____/ __ \ \ / /\ \ / /_   _\ \    / /  ____|
+ | |__ | |  | \ V /  \ V /  | |  \ \  / /| |__   
+ |  __|| |  | |> <    > <   | |   \ \/ / |  __|  
+ | |   | |__| / . \  / . \ _| |_   \  /  | |____ 
+ |_|    \____/_/ \_\/_/ \_\_____|   \/   |______|
+                                                 
+                                                 
+vinny#0123
+]]--
+
 local plrs = game:GetService("Players")
 
 local plr = plrs.LocalPlayer 
@@ -6,8 +19,10 @@ local hum = char:FindFirstChild("Humanoid")
 
 local ts = game:GetService("TweenService") 
 
+-- SprintBool
 local sprint = false
 
+-- Changeable values
 local default = 70
 local nowfov = 90
 local walkSpeed = 10
@@ -41,6 +56,8 @@ function onButtonPress()
 		tween4:Play()
 	end
 end
+
+--create mobile button
 local mobilebutton = contextActionService:BindAction("SprintButton",onButtonPress,true,"Sprint")
 contextActionService:SetPosition("SprintButton",UDim2.new(0.72,-25,0.20,-25))
 contextActionService:SetImage("SprintButton","rbxassetid://2572666627")
